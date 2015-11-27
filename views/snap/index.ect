@@ -1,0 +1,202 @@
+<% extend './layout/normal' %>
+
+<!-- head -->
+<% block 'head_content' : %>
+  <title><%= @title %> | WeeBee</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/snap/jquery.moreview.js"></script>
+  <script type="text/javascript" src="javascripts/snap/jquery.tab.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/snap/snap.css">
+<% end %>
+
+
+<div class="wrapper">
+
+<div class="index_top">
+  <img src="images/snap/common/title.jpg" width="1280px" alt="title">
+</div>
+
+<ul id="js-tab_main" class="index_navi">
+  <li>
+    <img src="images/snap/common/spring.png" width="100%" alt="spring">
+  </li>
+  <li>
+    <img src="images/snap/common/summer.png" width="100%" alt="spring">
+  </li>
+  <li>
+    <img src="images/snap/common/autumn_on.png" width="100%" alt="spring">
+  </li>
+  <li>
+    <img src="images/snap/common/winter.png" width="100%" alt="spring">
+  </li>
+</ul>
+
+
+<div id="js-new" class="index_new <%- @New.season %>">
+  <p class="index_logo">NEW</p>
+  <div></div>
+  <div class="link_box">
+  <a href="snap/<%- @New.sex %>/<%- @New.snap_no %>" class="link"></a>
+  <p><img src="images/snap/photo/<%= @New.sex %><%- @New.snap_no %>/<%- @New.sex %><%- @New.snap_no %>-1.jpg" width="100%" alt="new"></p>
+  <div class="index_no"><span class="index_font">NO.<br><span><%- @New.snap_no %></span></span></div>
+  <p class="index_name"><%- @New.english_name %></p>
+  <div></div>
+  <p class="index_date"><%- @New.date %></p>
+  </div>
+</div>
+
+
+<div id="js-tab_sub">
+<!-- spring -->
+  <div id="js-list_spring" class="index_list js-hide">
+  <ul class="index_left">
+<% for snap in @snaps : %>
+<% if snap.season == "spring" && snap.sex == "m" : %>
+  <li class="link_box">
+  <a href="snap/<%- snap.sex %>/<%- snap.snap_no %>" class="link"></a>
+    <p><img src="images/snap/photo/<%= snap.sex %><%- snap.snap_no %>/<%- snap.sex %><%- snap.snap_no %>-0.jpg" width="520px" height="780px" alt="<%- snap.snap_no %>"></p>
+  <div class="index_no"><span class="index_font">NO.<br><span><%- snap.snap_no %></span></span></div>
+  <p class="index_name"><%- snap.english_name %></p>
+  <div></div>
+  <p class="index_date"><%- snap.date %></p>
+  </li>
+<% end %>
+<% end %>
+  </ul>
+  <ul class="index_right" style="width: 600px;">
+<% for snap in @snaps : %>
+<% if snap.season == "spring" && snap.sex == "w" : %>
+    <li class="link_box">
+  <a href="snap/<%- snap.sex %>/<%- snap.snap_no %>" class="link"></a>
+    <p><img src="images/snap/photo/<%= snap.sex %><%- snap.snap_no %>/<%- snap.sex %><%- snap.snap_no %>-0.jpg" width="520px" height="780px" alt="<%- snap.snap_no %>"></p>
+  <div class="index_no"><span class="index_font">NO.<br><span><%- snap.snap_no %></span></span></div>
+  <p class="index_name"><%- snap.english_name %></p>
+  <div></div>
+  <p class="index_date"><%- snap.date %></p>
+  </li>
+<% end %>
+<% end %>
+  </ul>
+</div>
+<!-- summer -->
+  <div id="js-list_summer" class="index_list js-hide">
+  <ul class="index_left">
+<% for snap in @snaps : %>
+<% if snap.season == "summer" && snap.sex == "m" : %>
+  <li class="link_box">
+  <a href="snap/<%- snap.sex %>/<%- snap.snap_no %>" class="link"></a>
+    <p><img src="images/snap/photo/<%= snap.sex %><%- snap.snap_no %>/<%- snap.sex %><%- snap.snap_no %>-0.jpg" width="520px" height="780px" alt="<%- snap.snap_no %>"></p>
+  <div class="index_no"><span class="index_font">NO.<br><span><%- snap.snap_no %></span></span></div>
+  <p class="index_name"><%- snap.english_name %></p>
+  <div></div>
+  <p class="index_date"><%- snap.date %></p>
+  </li>
+<% end %>
+<% end %>
+  </ul>
+  <ul class="index_right" style="width: 600px;">
+<% for snap in @snaps : %>
+<% if snap.season == "summer" && snap.sex == "w" : %>
+    <li class="link_box">
+  <a href="snap/<%- snap.sex %>/<%- snap.snap_no %>" class="link"></a>
+    <p><img src="images/snap/photo/<%= snap.sex %><%- snap.snap_no %>/<%- snap.sex %><%- snap.snap_no %>-0.jpg" width="520px" height="780px" alt="<%- snap.snap_no %>"></p>
+  <div class="index_no"><span class="index_font">NO.<br><span><%- snap.snap_no %></span></span></div>
+  <p class="index_name"><%- snap.english_name %></p>
+  <div></div>
+  <p class="index_date"><%- snap.date %></p>
+  </li>
+<% end %>
+<% end %>
+  </ul>
+</div>
+<!-- autumn -->
+  <div id="js-list_autumn" class="index_list js-hide">
+  <ul class="index_left">
+<% for snap in @snaps : %>
+<% if snap.season == "autumn" && snap.sex == "m" : %>
+  <li class="link_box">
+  <a href="snap/<%- snap.sex %>/<%- snap.snap_no %>" class="link"></a>
+    <p><img src="images/snap/photo/<%= snap.sex %><%- snap.snap_no %>/<%- snap.sex %><%- snap.snap_no %>-0.jpg" width="520px" height="780px" alt="<%- snap.snap_no %>"></p>
+  <div class="index_no"><span class="index_font">NO.<br><span><%- snap.snap_no %></span></span></div>
+  <p class="index_name"><%- snap.english_name %></p>
+  <div></div>
+  <p class="index_date"><%- snap.date %></p>
+  </li>
+<% end %>
+<% end %>
+  </ul>
+  <ul class="index_right" style="width: 600px;">
+<% for snap in @snaps : %>
+<% if snap.season == "autumn" && snap.sex == "w" : %>
+    <li class="link_box">
+  <a href="snap/<%- snap.sex %>/<%- snap.snap_no %>" class="link"></a>
+    <p><img src="images/snap/photo/<%= snap.sex %><%- snap.snap_no %>/<%- snap.sex %><%- snap.snap_no %>-0.jpg" width="520px" height="780px" alt="<%- snap.snap_no %>"></p>
+  <div class="index_no"><span class="index_font">NO.<br><span><%- snap.snap_no %></span></span></div>
+  <p class="index_name"><%- snap.english_name %></p>
+  <div></div>
+  <p class="index_date"><%- snap.date %></p>
+  </li>
+<% end %>
+<% end %>
+  </ul>
+</div>
+<!-- winter -->
+  <div id="js-list_winter" class="index_list js-hide">
+  <ul class="index_left">
+<% for snap in @snaps : %>
+<% if snap.season == "winter" && snap.sex == "m" : %>
+  <li class="link_box">
+  <a href="snap/<%- snap.sex %>/<%- snap.snap_no %>" class="link"></a>
+    <p><img src="images/snap/photo/<%= snap.sex %><%- snap.snap_no %>/<%- snap.sex %><%- snap.snap_no %>-0.jpg" width="520px" height="780px" alt="<%- snap.snap_no %>"></p>
+  <div class="index_no"><span class="index_font">NO.<br><span><%- snap.snap_no %></span></span></div>
+  <p class="index_name"><%- snap.english_name %></p>
+  <div></div>
+  <p class="index_date"><%- snap.date %></p>
+  </li>
+<% end %>
+<% end %>
+  </ul>
+  <ul class="index_right" style="width: 600px;">
+<% for snap in @snaps : %>
+<% if snap.season == "winter" && snap.sex == "w" : %>
+    <li class="link_box">
+  <a href="snap/<%- snap.sex %>/<%- snap.snap_no %>" class="link"></a>
+    <p><img src="images/snap/photo/<%= snap.sex %><%- snap.snap_no %>/<%- snap.sex %><%- snap.snap_no %>-0.jpg" width="520px" height="780px" alt="<%- snap.snap_no %>"></p>
+  <div class="index_no"><span class="index_font">NO.<br><span><%- snap.snap_no %></span></span></div>
+  <p class="index_name"><%- snap.english_name %></p>
+  <div></div>
+  <p class="index_date"><%- snap.date %></p>
+  </li>
+<% end %>
+<% end %>
+  </ul>
+</div>
+
+
+<ul style="clear:both;"></ul>
+<div id="js-more" class="index_view_more">more view</div>
+</div>
+
+
+<div class="other">
+<ul class="js-tab">
+  <li class="js-select" style="float: left;">RANKING</li>
+</ul>
+<ul class="other js-content">
+  <li class="link_box">
+  <a href="w50.html" class="link"></a>
+  <p><img src="images/snap/photo/m50/m50-0.jpg" width="100%" alt=""></p>
+  <p><span class="rank">1.</span><span class="name">Takeda<br>Minori</span></p>
+  </li>
+  <li class="link_box">
+  <a href="w50.html" class="link"></a>
+  <p><img src="images/snap/photo/w50/w50-0.jpg" width="100%" alt=""></p>
+  <p><span class="rank">2.</span><span class="name">Takeda<br>Minori</span></p>
+  </li>
+  <li class="link_box">
+  <a href="w50.html" class="link"></a>
+  <p><img src="images/snap/photo/m49/m49-0.jpg" width="100%" alt=""></p>
+  <p><span class="rank">3.</span><span class="name">Takeda<br>Minori</span></p>
+  </li>
+</ul>
+</div>

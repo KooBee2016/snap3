@@ -1,0 +1,126 @@
+<% extend './layout/normal' %>
+<% block 'head_content' : %>
+  <title>NO.<%- @person.snap_no %> | Snap×Snap | WeeBee</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="/javascripts/snap/jquery.bxslider.js"></script>
+<script type="text/javascript" src="/javascripts/snap/jquery.tab.js"></script>
+<link rel="stylesheet" href="/stylesheets/snap/jquery.bxslider.css" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="/stylesheets/snap/snap.css">
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.bxslider').bxSlider({
+    auto: false,
+    pager: true,
+    pause:  4500,
+    speed: 250,
+    controls: true,
+    infiniteLoop: true,
+    swipeThreshold: 50
+    });
+  });
+</script>
+<% end %>
+
+<div class="wrapper">  
+
+<div class="bxslider content_photo">
+  <div><img src="/images/snap/photo/<%- @person.sex %><%- @person.snap_no %>/<%- @person.sex %><%- @person.snap_no %>-1.jpg" height="853px" alt="photo"></div>
+  <div><img src="/images/snap/photo/<%- @person.sex %><%- @person.snap_no %>/<%- @person.sex %><%- @person.snap_no %>-2.jpg" height="853px" alt="photo"></div>
+  <div><img src="/images/snap/photo/<%- @person.sex %><%- @person.snap_no %>/<%- @person.sex %><%- @person.snap_no %>-3.jpg" height="853px" alt="photo"></div>
+  <div><img src="/images/snap/photo/<%- @person.sex %><%- @person.snap_no %>/<%- @person.sex %><%- @person.snap_no %>-4.jpg" height="853px" alt="photo"></div>
+  <div><img src="/images/snap/photo/<%- @person.sex %><%- @person.snap_no %>/<%- @person.sex %><%- @person.snap_no %>-5.jpg" height="853px" alt="photo"></div>
+  <div><img src="/images/snap/photo/<%- @person.sex %><%- @person.snap_no %>/<%- @person.sex %><%- @person.snap_no %>-6.jpg" height="853px" alt="photo"></div>
+</div>
+
+<div class="content_no">
+  <p><span>NO.<br><%- @person.snap_no %></span></p>
+</div>
+
+<div class="content_profile">
+  <p class="content_name"><%- @person.name %>&nbsp;&emsp;<span>/&nbsp;<%- @person.english_name %></span></p>
+  <p class="content_bland"><%- @person.clothes %></p>
+  <% if typeof(@person.place) != 'undefined' : %>
+  <p class="content_place">place&nbsp;:&nbsp;元町</p>
+  <% end %>
+  <div></div>
+</div>
+
+<% if typeof(@person.question) != 'undefined' : %>
+<hr class="content_hr">
+
+<div class="content_question">
+  <p>Q&nbsp;よく行くお店は？<br>A&nbsp;～～～です。</p>
+  <p>Q&nbsp;よく行くお店は？<br>A&nbsp;～～～です。</p>
+  <p>Q&nbsp;よく行くお店は？<br>A&nbsp;～～～です。</p>
+  <p class="content_instagram">instagram&nbsp;:&nbsp;<a href="https://instagram.com/i_am_kiko/">※※※※</a></p>
+</div>
+
+<% end %>
+
+<% if typeof(@person.member) != 'undefined' : %>
+<hr class="content_hr">
+
+<div class="content_camera">
+  <p class="content_member"><img src="img/Ririki.jpg" width="240px" alt=""></p>
+  <p class="content_member_name">photo&nbsp;by&nbsp;Ririki</p>
+  <hr noshade>
+</div>
+
+<% end %>
+
+<div class="content_move-button">
+  <% if @person.snap_no - 1 != 0 : %>
+  <span class="content_prev"><a href="../<%- @person.sex %>/<%- @person.snap_no - 1 %>">&lt;&nbsp;PREV</a></span>
+  <% end %>
+  <span class="content_top"><a href="../../snap">一覧に戻る</a></span>
+  <% if @person.sex is @new3[0].sex : %>
+    <% if @person.snap_no + 1 <= @new3[0].snap_no : %>
+  <span class="content_next"><a href="../<%- @person.sex %>/<%- @person.snap_no + 1 %>">NEXT&nbsp;&gt;</a></span>
+    <% end %>
+  <% else : %>
+    <% if @person.snap_no + 1 <= @new3[1].snap_no : %>
+  <span class="content_next"><a href="../<%- @person.sex %>/<%- @person.snap_no + 1 %>">NEXT&nbsp;&gt;</a></span>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="other">
+<ul class="js-tab">
+  <li class="js-select" style="float: left;">RANKING</li>
+  <li style="float: right;">NEW</li>
+</ul>
+<ul class="other js-content">
+  <li class="js-list">
+  <ul>
+  <li class="link_box">
+  <a href="<%- @person.sex %><%- @person.snap_no %>.html" class="link"></a>
+  <p><img src="img/m50.jpg" width="100%" alt=""></p>
+  <p><span class="rank">1.</span><span class="name">Takeda<br>Minori</span></p>
+  </li>
+  <li class="link_box">
+  <a href="<%- @person.sex %><%- @person.snap_no %>.html" class="link"></a>
+  <p><img src="/images/snap/photo/<%- @person.sex %><%- @person.snap_no %>/<%- @person.sex %><%- @person.snap_no %>.jpg" width="100%" alt=""></p>
+  <p><span class="rank">2.</span><span class="name">Takeda<br>Minori</span></p>
+  </li>
+  <li class="link_box">
+  <a href="<%- @person.sex %><%- @person.snap_no %>.html" class="link"></a>
+  <p><img src="img/m49.jpg" width="100%" alt=""></p>
+  <p><span class="rank">3.</span><span class="name">Takeda<br>Minori</span></p>
+  </li>
+  </ul>
+  </li>
+  <li class="js-list js-hide"> 
+  <ul> <!-- NEW -->
+  <% for new123 in @new3 : %>
+  <li class="link_box">
+  <a href="../../snap/<%- new123.sex %>/<%- new123.snap_no %>" class="link"></a>
+  <p><img src="/images/snap/photo/<%= new123.sex %><%- new123.snap_no %>/<%- new123.sex %><%- new123.snap_no %>-0.jpg" width="100%" alt=""></p>
+  <p><span class="rank"><%- new123.rank %>.</span><span class="name"><%- new123.english_name %></span></p>
+  </li>
+  <% end %>
+  </ul>
+  </li>
+</ul>
+</div>
+
+</div>

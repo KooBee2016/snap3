@@ -1,0 +1,411 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:'Lato', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+}
+
+html {
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a.link {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.link_box {
+  position: relative;
+}
+
+/* 以下親ページ */
+
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.index_top {
+  width: 1280px;
+  height: 680px;
+  margin: 0 auto;
+}
+
+.index_navi {
+  width: 1280px;
+  height: 156px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.index_navi li {
+  width: 25%;
+  height: 138px;
+  float: left;
+}
+
+.index_new {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px 0px 40px;
+  position: relative;
+}
+
+.index_new p.index_logo {
+  font-size: 4.0rem;
+  font-weight: bold;
+}
+
+.index_new p.index_logo + div {
+  width: 93.3%;
+  position: absolute;
+  top: 137px;
+  border: 3px solid black;
+}
+
+.index_new img {
+  padding-top: 30px;
+}
+
+.index_new p.index_name {
+  font-size: 3.4rem;
+  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.index_new div.index_no {
+  top: 715px;
+}
+
+.index_no {
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 690px;
+  padding: 16px 0px;
+}
+
+.index_no span.index_font {
+  font-size: 1.7rem;
+  line-height: 50px;
+}
+
+.index_no span.index_font span {
+  font-size: 3.7rem;
+}
+
+p.index_name {
+  padding-top: 15px;
+  padding-left: 200px;
+  font-size: 2.0rem;
+  line-height: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+p.index_name + div {
+  margin-top: 8px;
+  border: 3px solid black;
+}
+
+p.index_date {
+  text-align: right;
+  padding-right: 5px;
+  padding-top: 10px;
+  font-size: 1.7rem;
+}
+
+.index_list {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.index_list li {
+  width: 520px;
+  height: 910px;
+  margin: 40px 40px 0px 40px;
+  position: relative;
+}
+
+.index_list ul.index_left {
+  float: left;
+}
+
+.index_list ul.index_right {
+  float: right;
+}
+
+.index_list div.index_no {
+  top: 719px;
+}
+
+.index_list p.index_name {
+  padding-left: 150px;
+}
+
+div.index_view_more {
+  width: 400px;
+  height: 85px;
+  margin: 120px auto 0px auto;
+  padding-top: 10px;
+  text-align: center;
+  border: 6px solid black;
+  font-size: 3.1rem;
+  clear: both;
+}
+
+div.other {
+  width: 1280px;
+  padding-top: 150px;
+  margin: 0 auto;
+}
+
+.js-tab li {
+  width: 618px;
+  height: 90px;
+  padding-top: 15px;
+  margin: 0px 10px;
+  text-align: center;
+  font-size: 4.0rem;
+  letter-spacing: 6px;
+  background-color: white;
+  border: 6px solid black;
+  color: black;
+}
+
+.js-tab li.js-select {
+  width: 630px;
+  height: 110px;
+  padding-bottom: 0px;
+  margin: 0px;
+  text-align: center;
+  font-size: 4.0rem;
+  letter-spacing: 6px;
+  background-color: black;
+  padding-top: 20px;
+  border: 0px solid black;
+  color: white;
+}
+
+.other ul.other {
+  background-color: black;
+  height: 730px;
+  padding-left: 13px;
+  clear: both;
+}
+
+.other li.link_box {
+  width: 370px;
+  margin: 36px 23px;
+  float: left;
+}
+
+.other li p {
+  color: white;
+}
+
+.other span.rank {
+  float: left;
+  font-size: 4.5rem;
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+.other span.name {
+  width: 180px;
+  float: right;
+  font-size: 2.0rem;
+  line-height: 33px;
+  padding-right: 55px;
+  padding-top: 32px;
+  letter-spacing: 6px;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+
+/* 以下子ページ */
+
+
+.content_photo {
+  width: 1280px;
+  height: 853px;
+  margin: 0 auto;
+}
+
+.content_no {
+  width: 248px;
+  height: 160px;
+  margin: 40px auto 0px auto;
+  text-align: center;
+  background-color: black; 
+}
+
+.content_no p {
+  padding-top: 17px;
+}
+
+.content_no span {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: white;
+  line-height: 60px;
+}
+
+.content_profile {
+  width: 1100px;
+  padding-top: 60px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content_profile p {
+  letter-spacing: 2px;
+}
+
+.content_profile p.content_name {
+  font-size: 4.0rem;
+}
+
+.content_profile p.content_name span {
+  font-size: 2.5rem;
+}
+
+.content_profile p.content_bland {
+  height: 410px;
+  font-size: 2.8rem;
+  padding: 10px 0px 0px 20px;
+  float: left;
+}
+
+.content_profile p.content_place {
+  font-size: 2.5rem;
+  padding: 0px 20px 0px 0px;
+  float: right;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.content_profile div {
+  clear: both;
+}
+
+.content_hr {
+  width: 1100px;
+  margin: 40px auto;
+  border-top: 6px solid black;
+}
+
+.content_question {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.content_question p {
+  font-size: 2.5rem;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+  padding-left: 20px;
+}
+
+.content_question p.content_instagram {
+  padding-bottom: 0px;
+}
+
+.content_question a {
+  text-decoration: underline;
+  color: blue;
+}
+
+.content_camera {
+  width: 1100px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content_camera p.content_member {
+  position: absolute;
+  right: 0px;
+}
+
+.content_camera p.content_member_name {
+  position: absolute;
+  right: 220px;
+  top: 95px;
+  font-size: 2.7rem;
+  letter-spacing: 7px;
+}
+
+.content_camera hr {
+  border-top: 3px solid black;
+  width: 700px;
+  position: absolute;
+  right: 0px;
+  top: 160px;
+}
+
+.content_move-button {
+  width: 1100px;
+  height: 100px;
+  padding-top: 150px;
+  font-size: 3.5rem;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.content_move-button a {
+  color: black;
+  text-decoration: none;
+}
+
+.content_prev {
+  position: absolute;
+  left: 0%;
+}
+
+.content_top {
+  position: absolute;
+  left: 36%;
+}
+
+.content_next {
+  position: absolute;
+  right: 0%;
+}
+
+
+/* tab.js */
+
+.js-hide {
+  display: none;
+}
+
+.js-on {
+  display: block;
+}
+
+.js-tab {
+  width: 100%;
+  height: 90px;
+}
+
+#js-tab_sub ul li{
+  display: none;
+}
+
+.js-block {
+  display: block;
+}
