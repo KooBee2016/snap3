@@ -113,4 +113,15 @@ conf.snaps = [
  {id: 109, date: 2015, season: "autumn", sex: "m", snap_no: 55,name: "岡島 匠", english_name: "Takumi Okajima", department: "経済", grade: 2, clothes: "jacket : neon sign <br>inner : markawear <br>pants : acne studios <br>shoes : troentorp"},
 ];
 
+
+var snap_analytics = new Array(conf.snaps.length);
+console.log(snap_analytics[0]);
+
+var snapLength = snap_analytics.length;
+
+for (var i = 1; i <= snapLength; i++) {
+	snap_analytics[i-1]["id"] == i;
+};
+console.log(snap_analytics[0]);
+
  module.exports = conf;
